@@ -389,6 +389,7 @@ public class SpringApplication {
 		// Load the sources
 		Set<Object> sources = getAllSources();
 		Assert.notEmpty(sources, "Sources must not be empty");
+		//将启动类注册到BDMap里面了
 		load(context, sources.toArray(new Object[0]));
 		listeners.contextLoaded(context);
 	}
